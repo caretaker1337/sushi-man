@@ -1,0 +1,103 @@
+query HomePageQuery($where: JSON) {
+  about_cs: about(locale: "cs") {
+    locale
+    text
+    title
+  }
+
+  about_ru: about(locale: "ru") {
+    locale
+    text
+    title
+  }
+
+  banner_cs: banner(locale: "cs") {
+    image {
+      url
+    }
+    locale
+  }
+
+  banner_ru: banner(locale: "ru") {
+    image {
+      url
+    }
+    locale
+  }
+
+  days(where: $where) {
+    dayOrder
+    timeFrom
+    timeTo
+  }
+
+  deliveryTitle_cs: deliveryTitle(locale: "cs") {
+    locale
+    title
+    text
+  }
+
+  deliveryTitle_ru: deliveryTitle(locale: "ru") {
+    locale
+    title
+    text
+  }
+
+  deliveryItems(locale: "all", sort: "title") {
+    locale
+    text
+    title
+  }
+
+  hero_cs: hero(locale: "cs") {
+    image {
+      url
+    }
+    locale
+    text
+    title
+  }
+
+  hero_ru: hero(locale: "ru") {
+    image {
+      url
+    }
+    locale
+    text
+    title
+  }
+
+  modalDay {
+    title
+    text
+  }
+
+  modalOrder {
+    title
+    text
+  }
+
+  reviews {
+    image {
+      url
+    }
+  }
+
+  schedule_cs: schedule(locale: "cs") {
+    locale
+    schedule
+    text
+    title
+  }
+
+  schedule_ru: schedule(locale: "ru") {
+    locale
+    schedule
+    text
+    title
+  }
+
+  shop {
+    ordersStop
+  }
+}

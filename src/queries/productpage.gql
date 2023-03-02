@@ -1,0 +1,66 @@
+query ProductPageQuery($productsWhere: JSON, $daysWhere: JSON) {
+  days(where: $daysWhere) {
+    dayOrder
+    timeFrom
+    timeTo
+  }
+
+  hero_cs: hero(locale: "cs") {
+    image {
+      url
+    }
+    locale
+    text
+    title
+  }
+
+  hero_ru: hero(locale: "ru") {
+    image {
+      url
+    }
+    locale
+    text
+    title
+  }
+
+  modalDay {
+    title
+    text
+  }
+
+  modalOrder {
+    title
+    text
+  }
+
+  products(where: $productsWhere) {
+    allergeny
+    id
+    image {
+      url
+    }
+    ingredients
+    isDrink
+    isPoke
+    isRoll
+    isStarter
+    isSet
+    price
+    product_modifiers {
+      price
+      name
+      id
+      submodifiers {
+        id
+        name
+      }
+    }
+    slug
+    title
+    weight
+  }
+
+  shop {
+    ordersStop
+  }
+}

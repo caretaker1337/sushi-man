@@ -1,0 +1,1 @@
+export { LayoutHead } from "./LayoutHead";

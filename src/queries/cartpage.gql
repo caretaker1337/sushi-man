@@ -1,0 +1,59 @@
+query CartPageQuery($where: JSON) {
+  additionals {
+    id
+    title
+    price
+  }
+
+  days(where: $where) {
+    dayOrder
+    timeFrom
+    timeTo
+  }
+
+  hero_cs: hero(locale: "cs") {
+    image {
+      url
+    }
+    locale
+    text
+    title
+  }
+
+  hero_ru: hero(locale: "ru") {
+    image {
+      url
+    }
+    locale
+    text
+    title
+  }
+
+  modalDay {
+    title
+    text
+  }
+
+  modalOrder {
+    title
+    text
+  }
+
+  shop {
+    ordersStop
+  }
+
+  schedule_cs: schedule(locale: "cs") {
+    locale
+    schedule
+    text
+    title
+  }
+
+  schedule_ru: schedule(locale: "ru") {
+    locale
+    schedule
+    text
+    title
+  }
+}

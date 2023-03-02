@@ -1,0 +1,19 @@
+query TermsPageQuery {
+  hero_cs: hero(locale: "cs") {
+    image {
+      url
+    }
+    locale
+    text
+    title
+  }
+
+  hero_ru: hero(locale: "ru") {
+    image {
+      url
+    }
+    locale
+    text
+    title
+  }
+}
